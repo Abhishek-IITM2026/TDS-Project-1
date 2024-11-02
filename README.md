@@ -1,7 +1,7 @@
 # Explanation about how scrapping is done:
   ## 1.Authorization and Headers: 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
-    ### Code:
+  ### Code:
       GITHUB_TOKEN = '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'
       HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
   
