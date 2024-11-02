@@ -1,3 +1,9 @@
+# Files:
+  1. `users.csv`: Contains information about the GitHub users in Tokyo with over 200 followers
+  2. `repositories.csv`: Contains information about the users in `users.csv` public repositories from these users
+  3. `gitscrapper.py`: Python script used to collect this data
+  4. `Analysis.ipynb`: This is the colab file that stores the codes used to analyze both csv files and answer the questions.
+
 # <ins> Explanation about how scrapping is done: </ins>
   The scrapping process is done using Github API in python.
   ##  1.Authorization and Headers: 
