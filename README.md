@@ -3,7 +3,7 @@
   ## 1.Authorization and Headers: 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
   ### Code:
-      GITHUB_TOKEN = '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'
+      GITHUB_TOKEN = 'my_access_token'
       HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
   
   ## 2. Helper function to clean company names: 
@@ -65,10 +65,42 @@
   
   ## 5.Saving Data to CSV:
     save_users_to_csv; save_repositories_to_csv saves user and repository information to two different CSVs. DictWriter is used to ensure each dictionary's keys map to the CSV headers. 
+  ### Code:
+      Save users to CSV
+      def save_users_to_csv(users, filename="users.csv"):
+        with open(filename, mode="w", newline="", encoding="utf-8") as file:
+          writer = csv.DictWriter(file, fieldnames=users[0].keys())
+          writer.writeheader()
+          writer.writerows(users)
+
+      Save repositories to CSV
+      def save_repositories_to_csv(repositories, filename="repositories.csv"):
+          with open(filename, mode="w", newline="", encoding="utf-8") as file:
+              writer = csv.DictWriter(file, fieldnames=repositories[0].keys())
+              writer.writeheader()
+              writer.writerows(repositories)
   
   ## 6.Main Execution (main function): 
     This orchestrates the entire process: fetch the user, save them into a file named users.csv; fetch all repositories from these users, save that to repositories.csv.
+  ### Code:
+      def main():
+        print("Fetching users...")
+        users = fetch_users()
+        save_users_to_csv(users)
+        print(f"Saved {len(users)} users to users.csv")
+    
+        print("Fetching repositories...")
+        all_repositories = []
+        for user in users:
+            user_repos = fetch_repositories(user["login"])
+            all_repositories.extend(user_repos)
+            print(f"Fetched {len(user_repos)} repositories for user {user['login']}")
+    
+        save_repositories_to_csv(all_repositories)
+        print(f"Saved {len(all_repositories)} repositories to repositories.csv")
 
+      if __name__ == "__main__":
+          main()
 
 # Some Interesting Insights from users.csv data:
   ## 1.Influential users: 
