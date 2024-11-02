@@ -1,28 +1,28 @@
-# <ins> Files: </ins>
+# <ins> Files : </ins>
   1.  [users.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/users.csv) : Contains information about the GitHub users in Tokyo with over 200 followers
   2.  [repositories.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/repositories.csv) : Contains information about the users in `users.csv` public repositories from these users
   3.  [gitscrapper.py](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/gitscrapper.py) : Python script used to collect this data
   4.  [Analysis.ipynb](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/Analysis.ipynb) : This is the colab file that stores the codes used to analyze both csv files and answer the questions.
 
-# <ins> Explanation about how scrapping is done: </ins>
+# <ins> Explanation about how scrapping is done : </ins>
   The scrapping process is done using Github API in python.
-  ##  1.Authorization and Headers: 
+  ##  1.Authorization and Headers : 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
-  ### Code:
+  ### Code :
       GITHUB_TOKEN = 'my_access_token'
       HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
   
-  ## 2.  Helper function to clean company names: 
+  ## 2.  Helper function to clean company names : 
     'the clean_company_name' function removes the leading "@" sign, removes leading and trailing white space and forces to upper case.
-  ### Code:
+  ### Code :
       def clean_company_name(company):
           if company:
               company = company.strip().lstrip('@').upper()
           return company
      
-  ## 3.FETCHING USER DATA:
+  ## 3.FETCHING USER DATA :
      'fetch_users' function fetches users in a given city (default: Tokyo) with at least a specified follower count from the GitHub API. In fact it fetches the users page by page until there are no more results, pausing for a second after every page to avoid rate limits. For each of the found users, the user's full details such as login, name, location, company, email, etc., are retrieved with an additional API request. The data is kept in a list of dictionaries called users, where the dictionary is for every user.
-  ### Code:
+  ### Code :
       def fetch_users(city="Tokyo", min_followers=200):
           users = []
           page = 1
@@ -50,9 +50,9 @@
               page += 1
               time.sleep(1)
   
-  ## 4.Repository Data Fetching:
+  ## 4.Repository Data Fetching :
     'fetch_repositories' function fetches from the GitHub API all the public repositories of each user, page by page. Details drawn will include name, date created, number of stargazers, and license per repository. The function returns a list of repositories related to the user, and every type of data is stored in dictionaries.
-  ### Code:
+  ### Code :
       def fetch_repositories(user_login):
           repositories = []
           page = 1
@@ -69,9 +69,9 @@
                       'watchers_count': repo['watchers_count'],
                       'language': repo
   
-  ## 5.Saving Data to CSV:
+  ## 5.Saving Data to CSV :
     'save_users_to_csv' and 'save_repositories_to_csv' saves user and repository information to two different CSVs. DictWriter is used to ensure each dictionary's keys map to the CSV headers. 
-  ### Code:
+  ### Code :
     
       def save_users_to_csv(users, filename="users.csv"):
         with open(filename, mode="w", newline="", encoding="utf-8") as file:
@@ -85,9 +85,9 @@
               writer.writeheader()
               writer.writerows(repositories)
   
-  ## 6.Main Execution (main function): 
+  ## 6.Main Execution (main function) : 
     This orchestrates the entire process: fetch the user, save them into a file named users.csv; fetch all repositories from these users, save that to repositories.csv.
-  ### Code:
+  ### Code :
       def main():
         print("Fetching users...")
         users = fetch_users()
@@ -107,28 +107,28 @@
       if __name__ == "__main__":
           main()
 
-# <ins> Some Interesting Insights from users.csv data: </ins>
-  ## 1.Influential users: 
+# <ins> Some Interesting Insights from users.csv data : </ins>
+  ## 1.Influential users : 
     Some of the users are considered influential or popular based on their large followers and public_repos.
-  ## 2.Inactive/Unhireable users:
+  ## 2.Inactive/Unhireable users :
     Although inactive/unhireable users also make up one-third of total users, so many of its profiles do not look at new chances.
-  ## 3.Geo Distribution: 
+  ## 3.Geo Distribution : 
     The location field describes many users based in major tech hubs, which can offer potential insight into distributions of tech ecosystems.
 
 
-# <ins> Some Interesting Insights from Repository.csv data: </ins>
-  ## 1.Repositories Popularity: 
+# <ins> Some Interesting Insights from repository.csv data : </ins>
+  ## 1.Repositories Popularity : 
     The average number of stars by a stargazer is zero, and the most of the repositories have a minimal count. However, 25% of the repositories have at least 2 stars, and the most popular repository has 58,479 stars.
-  ## 2.Most popular programming languages: 
+  ## 2.Most popular programming languages : 
     JavaScript (16.7%), Ruby (10%), Python (7.8%), Go (6.4%), and TypeScript (6.3%). This is a point of showing that developers typically make use of flexible web-centric languages, such as JavaScript and TypeScript.
-  ## 3.License Preferences:
+  ## 3.License Preferences :
     Most of the repositories (54.5%) use MIT License, possibly because of their permissive nature. Among other licenses are Apache 2.0 (15%), and some GNU as well as BSD licenses.
 
 
-# <ins> Recommendation for the Developers: </ins>
-  ## 1. Introduce a feature known as "Rising Repositories":  
+# <ins> Recommendation for the Developers : </ins>
+  ## 1. Introduce a feature known as "Rising Repositories" :  
     It not only shows the trending and quality repositories along with the rising star count but also categorizes them under popular programming languages such as JavaScript, Python, and TypeScript. The feature would also have licensing information so that developers are guided in the selection of permissive licenses like MIT or Apache 2.0 to foster collaboration and adoption. This would therefore create an open and encouraging environment of contribution, where the developers who are on the lookout for relevant high quality projects to contribute to, shall contribute on an informed basis.
-  ## 2. Focus Marketing Efforts on Tech Hubs:
+  ## 2. Focus Marketing Efforts on Tech Hubs :
     Developers and platform owners can even host networking events, hackathons, and workshops in the same main tech centers where most of their users reside. These will contribute to improving engagement and building support among local communities.
-  ## 3. Showcase Successful Projects to Attract Contributors:
+  ## 3. Showcase Successful Projects to Attract Contributors :
     Popular repositories might also be highlighted to drive attention to the best practices and attract potential contributors. Success stories might be shared on social platforms or posted on developer forums for more enhancement of community involvement and inspiring new contributions.
