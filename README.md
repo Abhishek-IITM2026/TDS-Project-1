@@ -27,7 +27,7 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
           return company
      
   ### 3.FETCHING USER DATA :
-  'fetch_users' function fetches users in a given city (default: Tokyo) with at least a specified follower count from the GitHub API. In fact it fetches the users page by page until there are no more results, pausing for a second after every page to avoid rate limits. For each of the found users, the user's full details such as login, name, location, company, email, etc., are retrieved with an additional API request. The data is kept in a list of dictionaries called users, where the dictionary is for every user.
+  'fetch_users' function fetches users in a given city (default: Tokyo) with at least a specified follower count from the GitHub API. In fact it fetches the users page by page until there are no more results, pausing for a second after every page to avoid rate limits. For each of the found users, the user's full details such as login, name, location, company, email, etc., are retrieved with an additional API request.
   #### Code :
       def fetch_users(city="Tokyo", min_followers=200):
           users = []
@@ -121,7 +121,7 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
   ### 3.Geo Distribution : 
   The location field describes many users based in major tech hubs, which can offer potential insight into distributions of tech ecosystems.
   ### 4.Users Bio :
-  One of the most startling findings of this analysis was that the developers with very short and precise bios received more followers than those developers with very long and elaborate descriptions. Short descriptions have obviously made the profiles more easily accessible and appealing, not to readers, but those who rapidly scan through their profiles.
+  One of the most startling findings of this analysis was that the developers with very short and precise bios received more followers than those developers with very long and elaborate descriptions.
 
 ## <ins> Some Interesting Insights from repository.csv data : </ins>
   ### 1.Repositories Popularity : 
@@ -136,7 +136,7 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
   ### 1. Capitalize on Popular Languages :
   Popular languages that developers may consider contributing to include JavaScript, Ruby, Python, Go, and TypeScript, as these are the ones dominating the rankings. Developers can also be part of projects in popular languages because more people show interest in those, hence increasing their profile visibility along with community involvement.
   ### 2. Participating Actively :
-  onsider dedicating time on weekends to engage actively on GitHub by contributing to personal projects or open-source initiatives. Weekend activity allows you to focus on enhancing your own repositories, showcase skills, and build a visible track record of contributions. By regularly pushing updates, fixing bugs, or adding features, you make your profile more attractive to potential collaborators and employers. Additionally, weekends provide a chance to engage in community discussions, review others’ work, and explore trending repositories to stay current with new technologies. This consistent activity can enhance your profile’s appeal, expand your network, and boost your standing within the GitHub community.
+  onsider dedicating time on weekends to engage actively on GitHub by contributing to personal projects or open-source initiatives. Weekend activity allows you to focus on enhancing your own repositories, showcase skills, and build a visible track record of contributions. By regularly pushing updates, fixing bugs, or adding features, you make your profile more attractive to potential collaborators and employers. 
   ### 3. Showcase Successful Projects to Attract Contributors :
   Popular repositories might also be highlighted to drive attention to the best practices and attract potential contributors. Success stories might be shared on social platforms or posted on developer forums for more enhancement of community involvement and inspiring new contributions.
   ### 4. Keep your bio short, focused, and impactful :
