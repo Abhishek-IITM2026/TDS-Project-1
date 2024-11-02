@@ -120,7 +120,7 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
   Although inactive/unhireable users also make up one-third of total users, so many of its profiles do not look at new chances.
   ### 3.Geo Distribution : 
   The location field describes many users based in major tech hubs, which can offer potential insight into distributions of tech ecosystems.
-  ### 4.Users Bio:
+  ### 4.Users Bio :
   One of the most startling findings of this analysis was that the developers with very short and precise bios received more followers than those developers with very long and elaborate descriptions. Short descriptions have obviously made the profiles more easily accessible and appealing, not to readers, but those who rapidly scan through their profiles.
 
 ## <ins> Some Interesting Insights from repository.csv data : </ins>
@@ -139,5 +139,5 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
   onsider dedicating time on weekends to engage actively on GitHub by contributing to personal projects or open-source initiatives. Weekend activity allows you to focus on enhancing your own repositories, showcase skills, and build a visible track record of contributions. By regularly pushing updates, fixing bugs, or adding features, you make your profile more attractive to potential collaborators and employers. Additionally, weekends provide a chance to engage in community discussions, review others’ work, and explore trending repositories to stay current with new technologies. This consistent activity can enhance your profile’s appeal, expand your network, and boost your standing within the GitHub community.
   ### 3. Showcase Successful Projects to Attract Contributors :
   Popular repositories might also be highlighted to drive attention to the best practices and attract potential contributors. Success stories might be shared on social platforms or posted on developer forums for more enhancement of community involvement and inspiring new contributions.
-  ### 4. Keep your bio short, focused, and impactful:
+  ### 4. Keep your bio short, focused, and impactful :
   Considering that shorter word bios generate more followers, try to give a hint of key skills, interests, or the things you are currently working on. Use words like key programming languages, specialties, ("Machine Learning Enthusiast"), or notable connections to attract a reader without being too elaborate. It can really be a plus to engagement and followers, given how most users form opinions over profile previews on this website.
