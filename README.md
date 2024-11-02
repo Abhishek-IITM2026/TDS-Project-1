@@ -1,3 +1,4 @@
+![](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/data_analytics.gif)
 # <ins> Github users in Tokyo </ins>
 This repository contains data about GitHub users in Tokyo with over 200 followers and their repositories.
 ## <ins> Files : </ins>
@@ -6,8 +7,6 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
   3.  [gitscrapper.py](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/gitscrapper.py) : Python script used to collect this data
   4.  [Analysis.ipynb](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/Analysis.ipynb) : This is the colab file that stores the codes used to analyze both csv files and answer the questions.
   5.  [README.md](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/README.md): This file contains a summary of this project, findings and recommendations.
-
-![](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/data_analytics.gif)
 
 ## <ins> Explanation about how scrapping is done : </ins>
   The scrapping process is done using Github API's end point "https://api.github.com/search/users?q=location:Tokyo+followers:>200&page={page}&per_page=100" to get a list of all users that are from Tokyo and have more than 200 followers. Then "https://api.github.com/user/{user_id}" is used to get all the required details of the users.
