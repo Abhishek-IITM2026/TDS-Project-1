@@ -5,7 +5,7 @@
   4.  [Analysis.ipynb](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/Analysis.ipynb) : This is the colab file that stores the codes used to analyze both csv files and answer the questions.
 
 # <ins> Explanation about how scrapping is done : </ins>
-  The scrapping process is done using Github API in python.
+  The scrapping process is done using Github API's end point "(https://api.github.com/search/users?q=location:Tokyo+followers:>200&page={page}&per_page=100)" to get a list of all users that are from Tokyo and have more than 200 followers. Then used 
   ##  1.Authorization and Headers : 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
   ### Code :
