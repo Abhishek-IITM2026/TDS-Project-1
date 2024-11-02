@@ -138,3 +138,5 @@
   Developers and platform owners can even host networking events, hackathons, and workshops in the same main tech centers where most of their users reside. These will contribute to improving engagement and building support among local communities.
   ## 3. Showcase Successful Projects to Attract Contributors :
   Popular repositories might also be highlighted to drive attention to the best practices and attract potential contributors. Success stories might be shared on social platforms or posted on developer forums for more enhancement of community involvement and inspiring new contributions.
+  ## 4. Polish up your bio:
+  Take time to update your bio. Be so rich in details and informational about your skills, projects and interests.
