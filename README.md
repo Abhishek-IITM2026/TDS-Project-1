@@ -1,12 +1,12 @@
 # <ins> Explanation about how scrapping is done: </ins>
   The scrapping process is done using Github API in python.
-  ## 1.Authorization and Headers: 
+  ## ** 1.Authorization and Headers: **
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
   ### Code:
       GITHUB_TOKEN = 'my_access_token'
       HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
   
-  ## 2. Helper function to clean company names: 
+  ## 2. ** Helper function to clean company names: **
     'the clean_company_name' function removes the leading "@" sign, removes leading and trailing white space and forces to upper case.
   ### Code:
       def clean_company_name(company):
@@ -102,7 +102,7 @@
       if __name__ == "__main__":
           main()
 
-# Some Interesting Insights from users.csv data:
+# <ins> Some Interesting Insights from users.csv data: </ins>
   ## 1.Influential users: 
     Some of the users are considered influential or popular based on their large followers and public_repos.
   ## 2.Inactive/Unhireable users:
