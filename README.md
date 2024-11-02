@@ -1,17 +1,17 @@
 # Explanation about how scrapping is done:
-  ##1.Authorization and Headers: 
+  ## 1.Authorization and Headers: 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
       GITHUB_TOKEN = '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'
       HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
   
-  ##2. Helper function to clean company names: 
+  ## 2. Helper function to clean company names: 
     'the clean_company_name' function removes the leading "@" sign, removes leading and trailing white space and forces to upper case.
       def clean_company_name(company):
           if company:
               company = company.strip().lstrip('@').upper()
           return company
      
-  ##3.FETCHING USER DATA: fetch_users
+  ## 3.FETCHING USER DATA: fetch_users
     This function fetches users in a given city (default: Tokyo) with at least a specified follower count from the GitHub API.
   In fact it fetches the users page by page until there are no more results, pausing for a second after every page to avoid rate limits.
   For each of the found users, the user's full details such as login, name, location, company, email, etc., are retrieved with an additional API request.
