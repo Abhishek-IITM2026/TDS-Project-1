@@ -1,6 +1,6 @@
 # <ins> Files : </ins>
   1.  [users.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/users.csv) : Contains information about the GitHub users in Tokyo with over 200 followers. It consists of 541 users.
-  2.  [repositories.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/repositories.csv) : Contains data of the public repositories of the users in `users.csv`.
+  2.  [repositories.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/repositories.csv) : Contains data of 66,427 public repositories of the users in [users.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/users.csv).
   3.  [gitscrapper.py](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/gitscrapper.py) : Python script used to collect this data
   4.  [Analysis.ipynb](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/Analysis.ipynb) : This is the colab file that stores the codes used to analyze both csv files and answer the questions.
   5.  [README.md](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/README.md): This file contains a summary of this project, findings and recommendations.
