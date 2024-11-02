@@ -119,7 +119,8 @@
   Although inactive/unhireable users also make up one-third of total users, so many of its profiles do not look at new chances.
   ## 3.Geo Distribution : 
   The location field describes many users based in major tech hubs, which can offer potential insight into distributions of tech ecosystems.
-
+  ## 4.Users Bio:
+  One of the most startling findings of this analysis was that the developers with very short and precise bios received more followers than those developers with very long and elaborate descriptions. Short descriptions have obviously made the profiles more easily accessible and appealing, not to readers, but those who rapidly scan through their profiles.
 
 # <ins> Some Interesting Insights from repository.csv data : </ins>
   ## 1.Repositories Popularity : 
