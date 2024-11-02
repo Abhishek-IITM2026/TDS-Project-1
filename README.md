@@ -1,4 +1,5 @@
-# <ins> Github users in Tokyo with over 200 followers </ins>
+# <ins> Github users in Tokyo </ins>
+This repository contains data about GitHub users in Tokyo with over 200 followers and their repositories.
 ## <ins> Files : </ins>
   1.  [users.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/users.csv) : Contains information about the GitHub users in Tokyo with over 200 followers. It consists of 541 users.
   2.  [repositories.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/repositories.csv) : Contains data of 66,427 public repositories of the users in [users.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/users.csv).
