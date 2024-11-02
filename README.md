@@ -1,4 +1,5 @@
 # Explanation about how scrapping is done:
+  The scrapping process is done using Github API in python.
   ## 1.Authorization and Headers: 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
   ### Code:
@@ -7,6 +8,7 @@
   
   ## 2. Helper function to clean company names: 
     'the clean_company_name' function removes the leading "@" sign, removes leading and trailing white space and forces to upper case.
+  ### Code:
       def clean_company_name(company):
           if company:
               company = company.strip().lstrip('@').upper()
@@ -14,6 +16,7 @@
      
   ## 3.FETCHING USER DATA: fetch_users
     This function fetches users in a given city (default: Tokyo) with at least a specified follower count from the GitHub API. In fact it fetches the users page by page until there are no more results, pausing for a second after every page to avoid rate limits. For each of the found users, the user's full details such as login, name, location, company, email, etc., are retrieved with an additional API request. The data is kept in a list of dictionaries called users, where the dictionary is for every user.
+  ### Code:
       def fetch_users(city="Tokyo", min_followers=200):
           users = []
           page = 1
@@ -43,6 +46,7 @@
   
   ## 4.Repository Data Fetching (fetch_repositories):
     This function fetches from the GitHub API all the public repositories of each user, page by page. Details drawn will include name, date created, number of stargazers, and license per repository. The function returns a list of repositories related to the user, and every type of data is stored in dictionaries.
+  ### Code:
       def fetch_repositories(user_login):
           repositories = []
           page = 1
