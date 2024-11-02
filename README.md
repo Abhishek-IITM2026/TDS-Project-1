@@ -3,6 +3,7 @@
   2.  [repositories.csv](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/repositories.csv) : Contains data of the public repositories of the users in `users.csv`.
   3.  [gitscrapper.py](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/gitscrapper.py) : Python script used to collect this data
   4.  [Analysis.ipynb](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/Analysis.ipynb) : This is the colab file that stores the codes used to analyze both csv files and answer the questions.
+  5.  [README.md](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/README.md): This file contains a summary of this project, findings and recommendations.
 
 ![](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/data%20analytics.gif)
 
@@ -11,13 +12,13 @@
   For repositories, "https://api.github.com/users/{user_login}/repos?per_page=100&page={page}" is used to get details about each repository present for every user, storing all the data in a csv file using python.
   ## The explaination for the python code is given below:
   ##  1.Authorization and Headers : 
-    This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
+  This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
   ### Code :
       GITHUB_TOKEN = 'my_access_token'
       HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
   
   ## 2.  Helper function to clean company names : 
-    'the clean_company_name' function removes the leading "@" sign, removes leading and trailing white space and forces to upper case.
+  'the clean_company_name' function removes the leading "@" sign, removes leading and trailing white space and forces to upper case.
   ### Code :
       def clean_company_name(company):
           if company:
