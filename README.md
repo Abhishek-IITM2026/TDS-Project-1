@@ -4,6 +4,8 @@
   3.  [gitscrapper.py](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/gitscrapper.py) : Python script used to collect this data
   4.  [Analysis.ipynb](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/Analysis.ipynb) : This is the colab file that stores the codes used to analyze both csv files and answer the questions.
 
+![](https://github.com/Abhishek-IITM2026/TDS-Project-1/blob/main/data%20analytics.gif)
+
 # <ins> Explanation about how scrapping is done : </ins>
   The scrapping process is done using Github API's end point "https://api.github.com/search/users?q=location:Tokyo+followers:>200&page={page}&per_page=100" to get a list of all users that are from Tokyo and have more than 200 followers. Then "https://api.github.com/user/{user_id}" is used to get all the required details of the users.
   For repositories, "https://api.github.com/users/{user_login}/repos?per_page=100&page={page}" is used to get details about each repository present for every user, storing all the data in a csv file using python.
