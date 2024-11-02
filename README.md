@@ -133,7 +133,7 @@ This repository contains data about GitHub users in Tokyo with over 200 follower
 
 
 ## <ins> Recommendation for the Developers : </ins>
-  ### 1. Capitalize on Popular Languages:
+  ### 1. Capitalize on Popular Languages :
   Popular languages that developers may consider contributing to include JavaScript, Ruby, Python, Go, and TypeScript, as these are the ones dominating the rankings. Developers can also be part of projects in popular languages because more people show interest in those, hence increasing their profile visibility along with community involvement.
   ### 2. Participating Actively :
   onsider dedicating time on weekends to engage actively on GitHub by contributing to personal projects or open-source initiatives. Weekend activity allows you to focus on enhancing your own repositories, showcase skills, and build a visible track record of contributions. By regularly pushing updates, fixing bugs, or adding features, you make your profile more attractive to potential collaborators and employers. Additionally, weekends provide a chance to engage in community discussions, review others’ work, and explore trending repositories to stay current with new technologies. This consistent activity can enhance your profile’s appeal, expand your network, and boost your standing within the GitHub community.
