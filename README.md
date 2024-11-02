@@ -1,4 +1,4 @@
-# Explanation about how scrapping is done:
+# <ins> Explanation about how scrapping is done: </ins>
   The scrapping process is done using Github API in python.
   ## 1.Authorization and Headers: 
     This code sets up the GitHub API token and headers for authentication, bypassing the stricter rate limits on unauthenticated access.
